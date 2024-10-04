@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.main-container {
+  @apply max-w-[1296px] mx-auto my-0;
+}
+
+header .menu-item {
+  @apply relative;
+}
+
+header .menu-item:not(:first-child) {
+  @apply pl-6 before:block before:w-[3px] before:h-[3px] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:bg-cream;
+}
+
+header .menu-item:not(:last-child) {
+  @apply mr-6;
+}
+
+header .menu-item a {
+  @apply text-center no-underline uppercase font-semibold text-xl text-cream;
+}
+
+.grid-row {
+  @apply grid grid-cols-12 gap-x-6;
+}
+
+.button {
+  @apply flex items-center justify-center rounded-twenty uppercase border;
+}
+
+.archive header {
+  @apply bg-dark;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: none;
+}
+
+.fancybox-content,
+.fancybox-video {
+  max-width: 720px !important;
+  margin: auto;
+}
+
+.wpcf7-form.init,
+.wpcf7-form.init > p {
+  @apply flex flex-col gap-6;
+}
+
+.custom-wrapper > p {
+  @apply grid grid-cols-2 gap-x-6;
+}
+
+.custom-wrapper > p > .wpcf7-form-control-wrap > input,
+.wpcf7-textarea {
+  @apply rounded-[8px] border border-grey pt-3 pl-3 focus-visible:outline-grey;
+}
+
+.custom-wrapper > p > .wpcf7-form-control-wrap > input {
+  @apply max-w-full h-12 pb-3;
+}
+
+.wpcf7-textarea {
+  @apply h-[120px] resize-none;
+}
+
+.wpcf7-list-item {
+  @apply m-0 text-grey;
+}
+
+.wpcf7-form .button {
+  @apply h-12 w-1/2 text-orange border-orange rounded-[8px]  cursor-pointer;
+}
