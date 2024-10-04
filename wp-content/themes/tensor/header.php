@@ -10,7 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class($class) ?>>
+<body <?php body_class($class = null); ?>>
 	<header class="pt-8">
 		<div class="main-container">
 			<nav class="flex justify-between items-center py-5 px-[60px] bg-orange bg-opacity-20 rounded-twenty">
